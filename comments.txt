@@ -1,0 +1,15 @@
+#Add new data to end of list
+def append(self, data):
+    #Create new link with data
+    node = node(data)
+    #If empty, make first part
+    if self.head is None:
+        self.head = node
+        return
+    else:
+        last = self.head
+        #Move to next until end
+        while last.next:
+            last = last.next
+        #Add to end of list
+        last.next = node
